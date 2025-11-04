@@ -1,0 +1,386 @@
+body {
+            box-sizing: border-box;
+        }
+        
+        /* === ADMIN MVC ARCHITECTURE STYLES === */
+        
+        /* === MODELS (Data Layer Styles) === */
+        .model-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .model-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* === VIEWS (Admin Interface Styles) === */
+        .admin-sidebar {
+            background: linear-gradient(180deg, #064E3B 0%, #065F46 100%);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .admin-header {
+            background: white;
+            border-bottom: 1px solid #E5E7EB;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .admin-content {
+            background: #F9FAFB;
+            min-height: calc(100vh - 80px);
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 4px 12px;
+        }
+        
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateX(4px);
+        }
+        
+        .nav-item.active {
+            background: linear-gradient(45deg, #10B981, #059669);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* === CONTROLLERS (Interactive Elements) === */
+        .admin-btn {
+            background: linear-gradient(45deg, #059669, #10B981);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .admin-btn:hover {
+            background: linear-gradient(45deg, #047857, #059669);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .admin-btn-secondary {
+            background: #6B7280;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .admin-btn-secondary:hover {
+            background: #4B5563;
+        }
+        
+        .admin-btn-danger {
+            background: #DC2626;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .admin-btn-danger:hover {
+            background: #B91C1C;
+        }
+        
+        .admin-input {
+            border: 2px solid #D1D5DB;
+            border-radius: 8px;
+            padding: 12px 16px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .admin-input:focus {
+            outline: none;
+            border-color: #10B981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+        
+        .admin-select {
+            border: 2px solid #D1D5DB;
+            border-radius: 8px;
+            padding: 12px 16px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .admin-select:focus {
+            outline: none;
+            border-color: #10B981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+        
+        /* === COMPONENTS === */
+        .admin-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .admin-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .admin-table th {
+            background: #F3F4F6;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #374151;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .admin-table td {
+            padding: 16px;
+            border-bottom: 1px solid #F3F4F6;
+        }
+        
+        .admin-table tr:hover {
+            background: #F9FAFB;
+        }
+        
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .status-pending { background: #FEF3C7; color: #92400E; }
+        .status-processing { background: #DBEAFE; color: #1E40AF; }
+        .status-completed { background: #D1FAE5; color: #065F46; }
+        .status-cancelled { background: #FEE2E2; color: #991B1B; }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .admin-sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                z-index: 50;
+                height: 100vh;
+            }
+            
+            .admin-sidebar.mobile-open {
+                transform: translateX(0);
+            }
+            
+            .admin-content {
+                margin-left: 0;
+            }
+        }
+        
+        /* === ANIMATIONS === */
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
+        
+        /* Chart container */
+      /* public/css/admin.css */
+/* Khung biểu đồ */
+#admin-content .chart-container{
+  position: relative;
+  height: 320px !important;      /* ép cứng */
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1);
+}
+
+/* Canvas bên trong chart-container */
+#admin-content .chart-container > canvas{
+  width: 100% !important;
+  height: 280px !important;       /* ép cứng */
+  max-height: 280px !important;
+  display: block;
+}
+/* Mặc định: ẩn trên mobile (trượt ra ngoài màn hình) */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 40;      /* trên overlay một bậc */
+    height: 100vh;
+    transition: transform .25s ease;
+  }
+  .admin-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+}
+
+/* Desktop: luôn hiện (tuỳ layout của bạn) */
+@media (min-width: 769px) {
+  .admin-sidebar {
+    transform: none !important;
+    position: fixed;
+  }
+}
+/* Căn giữa dọc toàn bảng */
+.admin-table td,
+.admin-table th {
+  vertical-align: middle;
+}
+
+/* Ô tên sp: ảnh + text cùng hàng */
+.cell-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 16rem;    /* ~256px */
+}
+
+/* Ảnh lớn (cột tên) */
+.prod-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.06) inset;
+}
+
+/* Ảnh nhỏ (cột giá) */
+.price-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.06) inset;
+}
+
+/* Tên + mô tả co giãn đúng, không tràn */
+.name-wrap {
+  min-width: 0;
+}
+.name-title {
+  font-weight: 600;
+  color: #111827; /* gray-900 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.name-desc {
+  font-size: 12px;
+  color: #6B7280; /* gray-500 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Cột giá: căn trái, ảnh + số cùng hàng, số nổi bật */
+.cell-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #059669; /* emerald-600 */
+}
+
+/* căn giữa dọc */
+.admin-table td, .admin-table th { vertical-align: middle; }
+
+/* ảnh thu nhỏ trong cột ảnh */
+.prod-thumb{
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.06) inset;
+}
+
+/* tên + mô tả gọn gàng */
+.name-wrap { min-width: 0; }
+.name-title{
+  font-weight: 600;
+  color: #111827; /* gray-900 */
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.name-desc{
+  font-size: 12px;
+  color: #6B7280; /* gray-500 */
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* Admin modal cơ bản (nếu chưa có) */
+.admin-modal { display: none; align-items: center; justify-content: center; }
+.admin-modal:not(.hidden) { display: flex; }
+.product-image img{
+  width:100%;
+  height:180px;      /* tuỳ bố cục của bạn */
+  object-fit:cover;
+  border-top-left-radius:1rem;
+  border-top-right-radius:1rem;
+  display:block;
+}
+  @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Đổi tên class để tránh lỗi escape */
+.admin-modal .fadeInEffect {
+  animation: fadeIn 0.15s ease-out both;
+}
